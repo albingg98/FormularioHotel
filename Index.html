@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Contacto</h1>
+
+        <div class="imagen"></div>
+
+        <form action="" method="post" id="formulario">
+            <div class="campo">
+                <label for="nombre">Nombre</label>
+                <!-- required hace que sea obligatorio rellenar el input, se suele poner al final de la etiqueta -->
+                <!-- patter es algo similar a una condicion, en el siguiente caso obliga la usuario a solo poner letras minusculas y mayusculas y simbolos como las tildes,
+                no puede introducir numeros. Además no permite poner menos de 2 letras ni más de 50.-->
+                <input type="text" maxlength="50" placeholder="Nombre completo" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,50}" required id="nombre" class="area focus-area">
+            </div>
+
+            <div class="campo">
+                <label for="email">Email</label>
+                <!-- aquí el patter hace que sea necesario poner @ y que termine con .algo ademas de permitir introducir tanto letras como numeros,
+                los pattern te recomiendo echarle un ojo en internet porque son algo complicados. -->
+                <input type="email" maxlength="30" placeholder="nombreusuario@dominio.ejemplo" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="La dirección Email debería de ser algo como raulsen43@gmail.com" required id="email" class="area focus-area">
+            </div>
+
+            <div class="campo">
+                <label for="tlfn">Teléfono</label>
+                <input type="tel" maxlength="9" pattern="[0-9]{9}" required id="tlfn" class="area focus-area">
+            </div>
+
+            <div class="campo">
+                <label for="habitacion">Habitación</label>
+                
+                <select name="habitaciones" id="habitacion" required>
+                    <!-- el disabled selected hace que una vez entres en la select no puedas volver a seleccionar
+                    "seleccione" -->
+                    <option value disabled selected>- seleccione -</option>
+                    <option value="basica"> Básica </option>
+                    <option value="doble"> Doble </option>
+                    <option value="suite"> Suite </option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" cols="30" rows="10" class="area focus-area"></textarea>
+            </div>
+
+            <div class="campo">
+                <input type="submit" value="Enviar" class="boton area">
+            </div>
+        </form>
+    </div class="contenedor">
+</body>
+</html>

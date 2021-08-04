@@ -1,0 +1,93 @@
+
+
+html {
+    box-sizing: border-box; 
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* -------------------------------------------------------------------- */
+
+.contenedor {
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+}
+
+.imagen {
+    background-image: url(img/hotel.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 40rem;
+}
+
+form {
+    background-color: #FFF;
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.area {
+    flex: 1;
+    border: 1px solid #e1e1e1;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+.focus-area:focus {
+    background-color: #000000;
+    color: #FFF;
+}
+
+textarea {
+    height: 10rem;
+    resize: none;
+}
+
+.boton {
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #FFF;
+    background-color: #000000;
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        flex: 0;
+    }
+}
